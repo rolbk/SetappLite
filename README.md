@@ -15,6 +15,10 @@ A lightweight native macOS app (SwiftUI) that replaces the official Setapp deskt
 - **Settings** — Custom install directory, configurable shell commands for post-install, post-update, and delete actions using `$APP` as placeholder.
 - **Agent Status** — Monitors `com.setapp.ProvisioningService` XPC reachability and warns on startup if the agent isn't running.
 
+## Dependencies
+
+- [ZIPFoundation](https://github.com/weichsel/ZIPFoundation) — ZIP archive handling for install & update extraction
+
 ## Building
 
-Requires macOS 14+ and Xcode 15+. Open the project and hit Run. No dependencies.
+Requires macOS 14+ and Xcode 15+. Open the project and hit Run. Dependencies are resolved automatically via Swift Package Manager.

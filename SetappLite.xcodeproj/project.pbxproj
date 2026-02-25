@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		886A24002F4F6C1100E2DA07 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 886A23FF2F4F6C1100E2DA07 /* ZIPFoundation */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		88DCC9392F4F623C002A3894 /* SetappLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SetappLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88DCC96D2F4F6380002A3894 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -24,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				886A24002F4F6C1100E2DA07 /* ZIPFoundation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +72,7 @@
 			);
 			name = SetappLite;
 			packageProductDependencies = (
+				886A23FF2F4F6C1100E2DA07 /* ZIPFoundation */,
 			);
 			productName = SetappLite;
 			productReference = 88DCC9392F4F623C002A3894 /* SetappLite.app */;
@@ -96,6 +102,9 @@
 			);
 			mainGroup = 88DCC9302F4F623C002A3894;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				886A23FE2F4F6C1100E2DA07 /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 88DCC93A2F4F623C002A3894 /* Products */;
 			projectDirPath = "";
@@ -325,6 +334,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		886A23FE2F4F6C1100E2DA07 /* XCRemoteSwiftPackageReference "ZIPFoundation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/weichsel/ZIPFoundation";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.20;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		886A23FF2F4F6C1100E2DA07 /* ZIPFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 886A23FE2F4F6C1100E2DA07 /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
+			productName = ZIPFoundation;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 88DCC9312F4F623C002A3894 /* Project object */;
 }

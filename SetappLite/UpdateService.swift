@@ -1,5 +1,6 @@
 import Foundation
 import Combine
+import ZIPFoundation
 
 enum AppProgress: Equatable {
     case downloading(fraction: Double)
@@ -94,25 +95,12 @@ class UpdateService: NSObject, ObservableObject {
             let destinationPath: String = try await Task.detached {
                 let fm = FileManager.default
                 let tempDir = fm.temporaryDirectory.appendingPathComponent(UUID().uuidString)
-                try fm.createDirectory(at: tempDir, withIntermediateDirectories: true)
 
                 if !fm.fileExists(atPath: targetDir.path(percentEncoded: false)) {
                     try fm.createDirectory(at: targetDir, withIntermediateDirectories: true)
                 }
 
-                let process = Process()
-                process.executableURL = URL(fileURLWithPath: "/usr/bin/ditto")
-                process.arguments = ["-xk", tempZip.path(percentEncoded: false), tempDir.path(percentEncoded: false)]
-                let errPipe = Pipe()
-                process.standardError = errPipe
-                try process.run()
-                process.waitUntilExit()
-
-                guard process.terminationStatus == 0 else {
-                    let errData = errPipe.fileHandleForReading.readDataToEndOfFile()
-                    let errStr = String(data: errData, encoding: .utf8) ?? "unknown"
-                    throw NSError(domain: "UpdateService", code: 1, userInfo: [NSLocalizedDescriptionKey: "ditto failed: \(errStr)"])
-                }
+                try FileManager.default.unzipItem(at: tempZip, to: tempDir)
 
                 // Find .app recursively (some archives have a SetappPayload/ wrapper)
                 guard let extractedApp = Self.findApp(in: tempDir) else {
