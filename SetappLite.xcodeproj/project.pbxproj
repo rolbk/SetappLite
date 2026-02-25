@@ -8,6 +8,7 @@
 
 /* Begin PBXFileReference section */
 		88DCC9392F4F623C002A3894 /* SetappLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SetappLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		88DCC96D2F4F6380002A3894 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -34,6 +35,7 @@
 			children = (
 				88DCC93B2F4F623C002A3894 /* SetappLite */,
 				88DCC93A2F4F623C002A3894 /* Products */,
+				88DCC96D2F4F6380002A3894 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -251,9 +253,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -281,9 +282,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
